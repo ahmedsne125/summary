@@ -10,6 +10,10 @@
 body {
     font-family: "Hanken Grotesk", "sans-serif";
     background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 :root {
@@ -35,27 +39,24 @@ ul {
 
 .container {
     background-color: var(--white);
-    max-width: 50%;
-    margin: 110px auto;
-    display: flex;
-    justify-content: space-between;
+    width: 630px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     border-radius: 20px;
     box-shadow: 1px 1px 26px hsl(0deg 4% 72%);
+    margin: 1rem;
 }
 
 .container .left {
     background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%) );
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    width: 100%;
     border-radius: inherit;
     text-align: center;
+    padding: 1.5rem;
 }
 .left > p {
     color: var(--light-lavender);
     font-size: 18px;
-    margin: 30px;
 }
 .circle {
    width: 150px;
@@ -63,7 +64,7 @@ ul {
    border-radius: 50%;
    background:linear-gradient( hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0)) ;
    text-align: center;
-   margin: 0 auto;
+   margin: 35px auto 25px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -81,6 +82,9 @@ ul {
     font-size: 11px;
 }
 
+.title {
+    margin-top: 50px;
+}
 
 .title h3 {
     margin: 17px 0 12px;
@@ -89,13 +93,11 @@ ul {
 
 .title p {
     color: var(--light-lavender);
-    margin-bottom: 40px;
     font-size: 14px;
 }
 
 .right {
-    width: 50%;
-    padding: 30px;
+    padding: 2rem;
 }
 
 .right h3 {
@@ -176,11 +178,9 @@ button:hover {
     transform: scale(1.1);
 }
 
-
-@media (max-width : 500px) {
+@media (max-width:550px) {
     .container {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 }
 
