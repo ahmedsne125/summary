@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@900&family=Caveat:wght@500&family=Hanken+Grotesk:wght@500;700;800&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Nova+Oval&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@500;600;700&family=Rubik+Wet+Paint&family=Tilt+Prism&family=Work+Sans:wght@200;300;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Hanken Grotesk", "sans-serif";
+    background: #ccc;
+}
+
+:root {
+    --light-red : hsl(0, 100%, 67%);
+    --Orangey-yellow : hsl(39, 100%, 56%);
+    --Green-teal : hsl(166, 100%, 37%);
+    --Cobalt-blue : hsl(234, 85%, 45%);
+    --bg-light-slate-blue : hsl(252, 100%, 67%);
+    --bg-light-royal-blue : hsl(241, 81%, 54%);
+    --circle-violet-blue : hsla(256, 72%, 46%, 1);
+    --circle-persian-blue : hsla(241, 72%, 46%, 0);
+    --white : hsl(0, 0%, 100%);
+    --pale-blue : hsl(221, 100%, 96%);
+    --light-lavender : hsl(241, 100%, 89%);
+    --dark-gray-blue : hsl(224, 30%, 27%);
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+.container {
+    background-color: var(--white);
+    max-width: 50%;
+    margin: 110px auto;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 1px 1px 26px hsl(0deg 4% 72%);
+}
+
+.container .left {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%) );
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: inherit;
+    text-align: center;
+}
+.left > p {
+    color: var(--light-lavender);
+    font-size: 18px;
+    margin: 30px;
+}
+.circle {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   background:linear-gradient( hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0)) ;
+   text-align: center;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;  
+}
+
+.circle p:first-child {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.circle p:last-child {
+    color: hsl(241deg 7% 65%);
+    font-size: 11px;
+}
+
+
+.title h3 {
+    margin: 17px 0 12px;
+    color: var(--white);
+}
+
+.title p {
+    color: var(--light-lavender);
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+
+.right {
+    width: 50%;
+    padding: 30px;
+}
+
+.right h3 {
+    font-weight: bold;
+    text-align: start;
+}
+
+.score-item {
+    margin: 30px 0;
+}
+
+.reaction-item,
+.memory-item,
+.verbal-item,
+.visual-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.reaction-item {
+    background-color: hsl(4deg 90% 58% / 8%);
+}
+.memory-item {
+    background-color: hsl(39deg 100% 56% / 8%);
+}
+.verbal-item {
+    background-color: hsl(166deg 100% 37% / 8%);
+}
+.visual-item {
+    background-color: rgb(17 37 212 / 8%);
+}
+
+.reaction-icon,
+.memory-icon,
+.verbal-icon,
+.visual-icon {
+    display: flex;
+}
+.red {
+    color: hsl(0, 100%, 67%);
+    margin-left: 7px;
+}
+.yellow {
+    color:hsl(39, 100%, 56%);
+    margin-left: 7px;
+}
+.green {
+    color: hsl(166, 100%, 37%);
+    margin-left: 7px;
+}
+.blue {
+    color: hsl(234, 85%, 45%);
+    margin-left: 7px;
+}
+.bold {
+    font-weight: bold;
+}
+.pale {
+    font-size: 15px;
+    font-weight: 300;
+    color: hsl(0deg 1% 51%);
+}
+button {
+    width: 100%;
+    background-color: hsl(224, 30%, 27%);
+    border: none;
+    padding: 12px 0;
+    border-radius: 23px;
+    color: var(--white);
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s;
+}
+button:hover {
+    transform: scale(1.1);
+}
+
+
+@media (max-width : 500px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
